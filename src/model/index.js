@@ -31,7 +31,8 @@ export const model = {
     },
   
 
-     ingresoGoogle: (googleUser) => {
+     ingresoGoogle: (userGoogle) => {
+
       if(!firebase.auth().currentUser){
 
         var provider = new firebase.auth.GoogleAuthProvider();

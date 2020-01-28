@@ -15,13 +15,19 @@ export const controler = {
     },
 
     newUser: (newUserFile) => {
-      model.registerUser(newUserFile); 
+      model.registerUser(newUserFile);
+      //registro en la nube 
     }, 
+
+    initControlerGoogleUser:() =>{
+      userView.InitAccessGoogle()
+    },
+
     googleUser: (userGoogle) => {
       model.ingresoGoogle(userGoogle);
-    }
+    },
   
-    changeTmp: (hash) => {
+     changeTmp: (hash) => {
       const sectionMain = document.getElementById('sectionPages');
       sectionMain.innerHTML = '';
   
@@ -34,6 +40,7 @@ export const controler = {
           case '#/signin':
                 sectionMain.appendChild(components.signIn());
                 controler.initControlerSignIn()
+                controler.initControlerGoogleUser()
               break;  
           case '#/register':
                 sectionMain.appendChild(components.register())

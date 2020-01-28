@@ -49,23 +49,22 @@ const userView = {
         });
     },
 
-
-
-
-    accessGoogle: () => {
-      const userInput = document.getElementById('social-sign-in');
-      console.log(userInput);
-
+    InitAccessGoogle: () => {
       const userGoogle = document.getElementById("button-Google");
       
-      userGoogle.addEventListener("click",ingresoGoogle,false);
-     // return userGoogle;
-      controler.newUser(newUserFile);
-
+      userGoogle.addEventListener("click",() => {
+        controler.googleUser(userGoogle);
+      });
+     
    },
 
 }
 
-
-
+/*accessGoogle: () => {
+ // const userGoogle = document.getElementById("button-Google");
+  
+  userGoogle.addEventListener("click",ingresoGoogle);
+ // return userGoogle;
+  controler.newUser(newUserFile);
+*/
 export { components, userView };
