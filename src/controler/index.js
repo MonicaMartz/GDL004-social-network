@@ -7,7 +7,7 @@ export const controler = {
     },
 
     newSession: (newSignIn) => {
-      model.verifyUser(newSignIn); 
+      model.verifyUser(newSignIn);  
     }, 
 
     initControlerRegister: () =>{
@@ -26,6 +26,16 @@ export const controler = {
     googleUser: (userGoogle) => {
       model.ingresoGoogle(userGoogle);
     },
+
+    initControlerFacebookUser:() =>{
+      userView.InitAccessFacebook ()
+    },
+
+    facebookUser: (userFacebook) => {
+      model.ingresoFacebook(userFacebook);
+    },
+
+
   
      changeTmp: (hash) => {
       const sectionMain = document.getElementById('sectionPages');
@@ -41,6 +51,7 @@ export const controler = {
                 sectionMain.appendChild(components.signIn());
                 controler.initControlerSignIn()
                 controler.initControlerGoogleUser()
+                controler.initControlerFacebookUser()
               break;  
           case '#/register':
                 sectionMain.appendChild(components.register())
@@ -51,9 +62,9 @@ export const controler = {
               break;
           // case '#/lugares':
               // { sectionMain.appendChild(components[id]()); }
-              break;
-          default:
-              sectionMain.appendChild(components.different())
+             // break;
+              default:
+                sectionMain.appendChild(components.different())
       }
     }
   }

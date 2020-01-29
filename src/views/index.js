@@ -58,6 +58,16 @@ const userView = {
      
    },
 
+    InitAccessFacebook: () => {
+    const userFacebook = document.getElementById("button-Facebook");
+    
+    userFacebook.addEventListener("click",() => {
+      controler.facebookUser(userFacebook);
+    });
+    
+   },
+
+
 }
 
 /*accessGoogle: () => {

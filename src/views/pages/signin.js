@@ -19,7 +19,7 @@ export default() => {
 
                 <ul class="social-sign-in">
                     <li><button id= "button-Google"><i class="fab fa-google"></i></button></li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></a></i></li>
+                    <li><button id= "button-Facebook"><i class="fab fa-facebook-f"></i></button></li>
                     <li><a href="#"><i class="fab fa-github"></i></a></i></li>
                 </ul>
                 
