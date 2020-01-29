@@ -47,11 +47,7 @@ export const model = {
         });
     },
 
-<<<<<<< HEAD
      ingresoGoogle: (userGoogle) => {
-=======
-    ingresoGoogle: (userGoogle) => {
->>>>>>> 64be396734d4f1baf58d75e0db2ffc7ca1455aef
 
       if(!firebase.auth().currentUser){
 
@@ -79,7 +75,6 @@ export const model = {
         });
       }else
       firebase.auth().signOut();
-<<<<<<< HEAD
      },
 
 
@@ -105,7 +100,4 @@ export const model = {
       });
      }
 
-=======
-    }
->>>>>>> 64be396734d4f1baf58d75e0db2ffc7ca1455aef
 }

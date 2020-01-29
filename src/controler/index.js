@@ -15,27 +15,19 @@ export const controler = {
     },
 
     newUser: (newUserFile) => {
-<<<<<<< HEAD
-      model.registerUser(newUserFile);
-      //registro en la nube 
-    }, 
 
-    initControlerGoogleUser:() =>{
-      userView.InitAccessGoogle()
-=======
       model.registerUser(newUserFile); 
       model.registerInCloud(newUserFile); 
     }, 
 
     initControlerGoogleUser: () => {
       userView.initAccessGoogle()
->>>>>>> 64be396734d4f1baf58d75e0db2ffc7ca1455aef
+
     },
 
     googleUser: (userGoogle) => {
       model.ingresoGoogle(userGoogle);
     },
-<<<<<<< HEAD
 
     initControlerFacebookUser:() =>{
       userView.InitAccessFacebook ()
@@ -44,10 +36,6 @@ export const controler = {
     facebookUser: (userFacebook) => {
       model.ingresoFacebook(userFacebook);
     },
-
-
-=======
->>>>>>> 64be396734d4f1baf58d75e0db2ffc7ca1455aef
   
      changeTmp: (hash) => {
       const sectionMain = document.getElementById('sectionPages');
@@ -63,10 +51,7 @@ export const controler = {
                 sectionMain.appendChild(components.signIn());
                 controler.initControlerSignIn()
                 controler.initControlerGoogleUser()
-<<<<<<< HEAD
                 controler.initControlerFacebookUser()
-=======
->>>>>>> 64be396734d4f1baf58d75e0db2ffc7ca1455aef
               break;  
           case '#/register':
                 sectionMain.appendChild(components.register())
