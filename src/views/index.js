@@ -49,6 +49,7 @@ const userView = {
         });
     },
 
+<<<<<<< HEAD
     InitAccessGoogle: () => {
       const userGoogle = document.getElementById("button-Google");
       
@@ -57,6 +58,19 @@ const userView = {
       });
      
    },
+=======
+
+    initAccessGoogle: () => {
+      const userGoogle = document.getElementById("button-Google");
+      
+      userGoogle.addEventListener("click", () => {
+        controler.googleUser(userGoogle);
+      });
+    },
+
+
+   
+>>>>>>> 64be396734d4f1baf58d75e0db2ffc7ca1455aef
 
     InitAccessFacebook: () => {
     const userFacebook = document.getElementById("button-Facebook");

@@ -13,8 +13,11 @@ export const model = {
     
 
     registerUser: (newUserFile) => {
-    
-        firebase.auth().createUserWithEmailAndPassword(newUserFile.userEmail, newUserFile.userPass).catch(function(error) {
+     
+      const email = newUserFile.userEmail;
+      const pass = newUserFile.userPass;
+
+        firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
             let errorCode = error.code;
             let errorMessage = error.message;
             alert(errorMessage)
@@ -26,12 +29,29 @@ export const model = {
             }).catch(function(error){
               //An error happened.
             });
-          });
-
+          });  
     },
-  
 
+    registerInCloud: (newUserFile) => {
+
+      let db = firebase.firestore();    
+        db.collection("users").add({
+          first: newUserFile.userEmail,
+          last: newUserFile.userPass,
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+    },
+
+<<<<<<< HEAD
      ingresoGoogle: (userGoogle) => {
+=======
+    ingresoGoogle: (userGoogle) => {
+>>>>>>> 64be396734d4f1baf58d75e0db2ffc7ca1455aef
 
       if(!firebase.auth().currentUser){
 
@@ -59,6 +79,7 @@ export const model = {
         });
       }else
       firebase.auth().signOut();
+<<<<<<< HEAD
      },
 
 
@@ -84,4 +105,7 @@ export const model = {
       });
      }
 
+=======
+    }
+>>>>>>> 64be396734d4f1baf58d75e0db2ffc7ca1455aef
 }
