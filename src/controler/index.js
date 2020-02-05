@@ -17,7 +17,7 @@ export const controler = {
     newUser: (newUserFile) => {
 
       model.registerUser(newUserFile); 
-      model.registerInCloud(newUserFile); 
+     // model.registerInCloud(newUserFile); 
     }, 
 
     initControlerGoogleUser: () => {

@@ -31,7 +31,7 @@ export const model = {
             });
           });  
     },
-
+/*
     registerInCloud: (newUserFile) => {
 
       let db = firebase.firestore();    
@@ -46,7 +46,7 @@ export const model = {
             console.error("Error adding document: ", error);
         });
     },
-
+*/
      ingresoGoogle: (userGoogle) => {
 
       if(!firebase.auth().currentUser){
